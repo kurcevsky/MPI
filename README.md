@@ -16,7 +16,27 @@ Otrzymałem:
 Wartosc PI= 3.1412671327650821, Blad= 0.0003255208247110
 Czas programu: = 0.000127
 ```
-Legenda najważniejszych funkcji:
+
+<b>zad2.c</b>
+```md
+mpicc zad2.c -o zad2.exe -lm
+mpirun -np 4 zad1.exe
+```
+
+```md
+PID = 3
+suma = 10.000000
+
+PID = 2
+suma = 2.000000
+
+PID = 1
+suma = 28.000000
+
+PID = 0
+SUMA = 32.000000
+```
+Legenda najważniejszych funkcji:<br>
 MPI_Init - Funkcja inicjalizuje środowisko wykonywania programu. Dopiero od momentu wywołania MPI_Init można używać pozostałych funkcji MPI<br>
 MPI_Finalize - Funkcja zwalnia zasoby używane przez MPI i przygotowuje system do zamknięcia.<br>
 MPI_Reduce - Bardzo ważna funkcja - pozwala wykonać na przykład sumowanie wszystkich częściowych wyników otrzymanych w procesach i umieszczenie wyniku w zmiennej.<br>
